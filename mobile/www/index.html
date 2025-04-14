@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8"  name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, please refer to the docs:
+            https://cordova.apache.org/docs/en/latest/
+        Some notes:
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link rel="stylesheet" href="css/index.css">
+        <title>Aisat Registration</title>
+    </head>
+    <body>
+        <div >
+            <div id="reset-container" class="popup-container">
+            <div ><img src="img/lock.png" id="lock-img" alt="error-loading-image"></div>
+            <div class="popup-content" id="email-container">
+                <input type="text" id="forgot-password" placeholder="Email/Phone" required>
+                <button class="btn" id="send-code">Send</button>
+                
+            </div>
+
+            <div>
+                <div id="code-container" class="code-content">
+                    <input type="code" maxlength="1" class="code-input" id="digit1" >
+                    <input type="code" maxlength="1" class="code-input" id="digit2" >
+                    <input type="code" maxlength="1" class="code-input" id="digit3">
+                    <input type="code" maxlength="1" class="code-input" id="digit4">
+
+                    <button class="btn" id="continue-reset">Continue</button>
+                    <p>Check your email for verification code. <br><a href="#">Resend Code</a></p>
+                    
+                </div>
+            
+            </div>
+            <div id="resetpass-con" class="resetpass-content">
+                <input type="password" id="new-password" placeholder="New Password" required>
+                <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+                <button class="btn" id="resetbutton">Reset</button>
+                
+            </div>
+        </div>
+    </div>
+
+        <div class="">
+            <div>
+                <div id="reg-container" class="register-container">
+                    <form action="post" id="regForm">
+                        <input type="text" id="name" name="name" placeholder="Name:" required>
+                        <input type="text" id="course" name="course" placeholder="Course:" required>
+                        <input type="text" id="idno" name="idno" placeholder="ID No.:" required>
+                        <input type="number" id="cell" name="cell" placeholder="Cell No.:" required>
+                        <input type="email" id="email" name="email" placeholder="Email:" required>
+    
+                        <input type="password" id="password" name="password" placeholder="Password:" required>
+                        <input type="password" id="cpassword" name="cpassword" placeholder="Confirm Password:" required>
+                        <button type="submit">Register</button>
+                        <p id="toggle-text">Already have an account?<a href="#" id="login-link">Login</a></p></form>
+                </div>
+            </div>
+    
+            <div >
+                <div id="container" class="form-container"  >
+                    
+                    <form method="post" id="loginForm">
+                        <input type="text" id="name" name="name" placeholder="ID No.:" required>
+    
+                        <input type="email" id="email" name="email" placeholder="Email:" required>
+    
+                        <input type="password" id="password" name="password" placeholder="password" required>
+                        <p>Forgot password? <a href="#" id="forgot-link">Reset</a></p>
+    
+                        <button type="submit">Login</button>
+                        <p>Don't have an account? <a href="#" id="register-link">Register</a></p>
+                    </form>
+                </div>
+    
+            </div>
+            <div class="app">
+                <div class="intro">
+                      <img id="logo" src="img/logo.png" alt="AISAT Logo" class="logo" />
+                      <img id="aisat" src="img/aisat.png" alt="AISAT" class="aisat" />
+    
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/request.js"></script>
+        <sciript src="js/pushnotif.js"></script>
+    </body>
+</html>

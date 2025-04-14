@@ -1,0 +1,379 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+ @font-face {
+    font-family: 'AndikaNewBasic';
+    src: url('Andika-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ html, body {
+    font-family: 'AndikaNewBasic', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(
+      to bottom,
+      #3686F7 0%,
+      #ffffff 40%,
+      #ffffff 60%,
+      #F6C932 100%
+    );
+    
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+
+
+
+  .logo{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s ease, visibility 0s 1s; 
+
+  }
+
+
+  .aisat{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 250px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    background-repeat: no-repeat;
+
+  }
+
+  .logo.show {
+    top: 25%;
+    width: 120px;
+    height: 120px;
+    visibility: visible;
+
+    left: 50%;
+    transform: translate(-50%, -50%); /* centers the div */
+    
+  }
+
+  .aisat.show {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+  
+  }
+
+  .form-container {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: auto; 
+    padding: 30px 20px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+    display: block !important;
+}
+
+
+.form-container.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+    display: block !important;
+
+}
+.form-container.hide{
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+    display: none !important;
+
+  }
+
+
+
+
+  .register-container{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: auto; /* or something wider like 280px */
+    padding: 30px 20px;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+    display: block !important;
+    z-index: 10;
+}
+    
+.register-container.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+    display: block !important;
+}
+
+.register-container.hide {
+    z-index: 10;
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+    display: none !important;
+}
+
+
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="name"],
+  input[type="number"]{
+      display: block;
+      width: 200px;
+      padding: 10px 14px;
+      margin: 10px auto;
+  
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(115, 115, 115, 0.6);
+      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+  }
+
+
+button[type="submit"], .btn{
+    width: 45%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover, .btn:hover{
+    background-color: #357ae8;
+}
+
+
+.forgot-password {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block;
+}
+
+.signup-link {
+    font-size: 12px;
+    margin-top: 15px;
+}
+
+.signup-link a {
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+}
+
+
+p {
+    font-size: 12px;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+#forgot-link {
+    font-size: 12px;
+    text-decoration: none;
+    margin: 10px 0;
+    display: block ;
+    
+}
+#forgot-link.clicked {
+    color: #4285F4;
+    text-decoration: underline;
+}
+
+#lock-img{
+    width: 100px;
+    height: 100px;
+    margin-right: 5px;
+    vertical-align: middle;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: #333 0px 0px 50px;
+    border-radius: 100%;
+}
+
+
+.popup-container{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1); /* transparent */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* optional border */
+    border-radius: 12px;
+    backdrop-filter: blur(6px); /* frosted glass effect */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 1s ease, visibility 0s;
+
+
+    text-align: center;
+    transition: opacity 1s ease, visibility 0s 1s;
+    z-index: 12;
+}
+
+
+.popup-container.showpopup {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+    display: block !important;
+
+}
+.popup-container.hidepopup{
+    opacity: 0;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+    display: none !important;
+
+}
+
+.container.popupactive{
+    backdrop-filter: blur(50px); /* frosted glass effect */
+
+}
+
+
+.popup-content{
+    padding-top: 40%;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+    text-align: center;
+    display: block;
+
+    
+}
+
+.popup-content.hide-email-sent{
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+
+}
+
+.popup-content.show-email-sent{
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+
+}
+
+.code-input {
+    padding-top: 40%;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding: 10px;
+    margin: 5px;
+    
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(115, 115, 115, 0.6);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+    
+    font-size: 24px;
+    text-align: center;
+}
+
+.code-content{
+    padding-top: 40%;
+}
+
+.code-content.hide-code{
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+}
+.code-content.show-code{
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+
+}
+
+
+.resetpass-content{ 
+    padding-top: 40%;
+    display: none !important;
+}
+
+.resetpass-content.hide-resetpass{
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease, visibility 0s 1s;
+
+}
+.resetpass-content.show-resetpass{
+    display: block !important;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease, visibility 0s;
+
+}
