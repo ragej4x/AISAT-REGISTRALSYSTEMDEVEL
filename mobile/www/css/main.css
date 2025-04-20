@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'AndikaNewBasic';
+    src: url('Andika-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+ html, body {
+    font-family: 'AndikaNewBasic', sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(
+      to bottom,
+      #3686F7 0%,
+      #ffffff 40%,
+      #ffffff 60%,
+      #F6C932 100%
+    );
+    
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  
+  .logo{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 130px;
+    height: 130px;
+    background-image: url(../img/logo.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 1s ease, visibility 0s 1s; 
+  }
+
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 300px;
+    gap: 10px;
+  }
+  
+  button {
+    width: 200px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+  }
+  
+  #nowbtn {
+    background-color: #F6C932;
+    color: white;
+  }
+  
+  #nowbtn:hover {
+    background-color: #fbe290;
+  }
+  
+  #appointbtn {
+    background-color: #4d9dfb;
+    color: white;
+  }
+  
+  #aaButton:hover {
+    background-color: #78b6fc;
+  }
+  
+  .divider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  
+  hr {
+    width: 100px;
+    border: none;
+    border-top: 2px solid #ccc;
+  }
+  
+
+.aisat{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 250px;
+    height: auto;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    text-align: center;
+    background-repeat: no-repeat;
+
+  }
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: 50px;
+  }
+  
+  .left, .right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right {
+    gap: 20px;
+  }
+  
+  .header img {
+    width: 24px;
+    cursor: pointer;
+  }
+  
+
+  .part1, .part2, .part3, .part4 {
+    display: none;
+  }
+  .part1 {
+    display: block;
+  }
+  
+
+.part4 input {
+    width: 250px;
+    padding: 7px;
+    margin: 2px 0;
+    border-radius: 10px;
+    border: 1px solid #aaa;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+}
+  #nextbtn {
+    margin-top: 10px;
+    background-color: #3686F7;
+    color: white;
+  }
+  .paybtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+    padding: 8px 24px;
+    background-color: #3686F7;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    margin: 1px 0;
+    width: 250px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .paybtn img {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .paybtn:hover {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+  }
+  
+  .paybtn:hover img {
+    filter: brightness(0) invert(1); /* make icons white on hover */
+  }
+  
+  .paybtn:active {
+    transform: scale(0.98);
+    background-color: #0056b3;
+    border-color: #0056b3;
+  }
+  
+
+
+#qbtn, #shsbtn{
+    background-color: #F6C932;
+    color: #ffffff;
+}
+#collegebtn{
+    background-color: #4d9dfb;
+    color: #ffffff;
+}

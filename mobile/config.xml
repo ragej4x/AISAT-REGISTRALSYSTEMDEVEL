@@ -1,11 +1,32 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.aczon.www" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>system</name>
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.aczon.myapp" version="1.0.0"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <name>aisatregistral</name>
     <description>Sample Apache Cordova App</description>
     <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
         Apache Cordova Team
     </author>
+
     <content src="index.html" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
+    
+    <access origin="http://192.168.1.5:3000" />
+    
+    <!-- Allow navigation to both HTTP and HTTPS URLs -->
+    <allow-navigation href="http://192.168.1.5:3000/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="*" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+    <platform name="android">
+        <!-- Allow cleartext (non-HTTPS) traffic for local API -->
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
+    </platform>
+
 </widget>
